@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.QuestsPage"
+             Title="Quests"
+             BackgroundColor="White">
+    
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            
+            <!-- Header -->
+            <Label Text="Daily Quests"
+                   FontSize="28" 
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   Margin="0,10,0,20"/>
+            
+            <!-- Subtitle -->
+            <Label Text="Complete quests to earn points!"
+                   FontSize="16" 
+                   TextColor="Gray"
+                   Margin="0,0,0,20"/>
+            
+            <!-- Total Points Card -->
+            <Border Stroke="Purple"
+                    StrokeThickness="2"
+                    Padding="20"
+                    Margin="0,0,0,20"
+                    StrokeShape="RoundRectangle 15"
+                    BackgroundColor="Purple">
+                <HorizontalStackLayout Spacing="15">
+                    <Label Text="⭐"
+                           FontSize="32"
+                           VerticalOptions="Center"/>
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Total Points"
+                               FontSize="14"
+                               TextColor="White"
+                               Opacity="0.9"/>
+                        <Label x:Name="TotalPointsLabel"
+                               Text="0 pts"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               TextColor="White"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+            
+            <!-- Quests Section Title -->
+            <Label Text="Today's Quests"
+                   FontSize="20" 
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   Margin="0,10,0,10"/>
+            
+            <!-- Quests Container - This is where quest cards will be added dynamically -->
+            <VerticalStackLayout x:Name="QuestsContainer" 
+                                Spacing="15"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

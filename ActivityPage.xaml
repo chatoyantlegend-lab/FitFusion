@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.ActivityPage"
+             Title="Activity"
+             BackgroundColor="White">
+    
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            
+            <!-- Header -->
+            <Label x:Name="HeaderLabel"
+                   FontSize="24" 
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+            
+            <!-- Weekly Overview Card -->
+            <Border Stroke="LightGray"
+                    StrokeThickness="1"
+                    Padding="15"
+                    Margin="0,10"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="White">
+                <VerticalStackLayout Spacing="10">
+                    <Label x:Name="WeeklyTitle" 
+                           FontSize="16" 
+                           FontAttributes="Bold" 
+                           TextColor="Black"/>
+                    <Label x:Name="WeeklySubtitle" 
+                           FontSize="14" 
+                           TextColor="Gray"/>
+                    <HorizontalStackLayout x:Name="WeekDayContainer" 
+                                          Spacing="5" 
+                                          HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Border>
+            
+            <!-- Section Title -->
+            <Label x:Name="SectionTitle"
+                   FontSize="18" 
+                   FontAttributes="Bold" 
+                   TextColor="Black" 
+                   Margin="0,10,0,5"/>
+            
+            <!-- Steps Card -->
+            <Border x:Name="StepsCard"
+                    Stroke="LightGray"
+                    StrokeThickness="1"
+                    Padding="15"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="White">
+                <HorizontalStackLayout Spacing="15">
+                    <BoxView Color="LightBlue" 
+                             WidthRequest="40" 
+                             HeightRequest="40" 
+                             CornerRadius="20"/>
+                    <VerticalStackLayout Spacing="5" VerticalOptions="Center">
+                        <Label x:Name="StepsLabel" 
+                               FontSize="12" 
+                               TextColor="Gray"/>
+                        <Label x:Name="StepsValue" 
+                               FontSize="20" 
+                               FontAttributes="Bold" 
+                               TextColor="Black"/>
+                        <Label x:Name="StepsDetail" 
+                               FontSize="10" 
+                               TextColor="Gray"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+            
+            <!-- Heart Rate Card -->
+            <Border x:Name="HeartRateCard"
+                    Stroke="LightGray"
+                    StrokeThickness="1"
+                    Padding="15"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="White">
+                <HorizontalStackLayout Spacing="15">
+                    <BoxView Color="LightPink" 
+                             WidthRequest="40" 
+                             HeightRequest="40" 
+                             CornerRadius="20"/>
+                    <VerticalStackLayout Spacing="5" VerticalOptions="Center">
+                        <Label x:Name="HeartRateLabel" 
+                               FontSize="12" 
+                               TextColor="Gray"/>
+                        <Label x:Name="HeartRateValue" 
+                               FontSize="20" 
+                               FontAttributes="Bold" 
+                               TextColor="Black"/>
+                        <Label x:Name="HeartRateDetail" 
+                               FontSize="10" 
+                               TextColor="Gray"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+            
+            <!-- Active Minutes Card -->
+            <Border x:Name="ActiveMinutesCard"
+                    Stroke="LightGray"
+                    StrokeThickness="1"
+                    Padding="15"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="White">
+                <HorizontalStackLayout Spacing="15">
+                    <BoxView Color="LightGreen" 
+                             WidthRequest="40" 
+                             HeightRequest="40" 
+                             CornerRadius="20"/>
+                    <VerticalStackLayout Spacing="5" VerticalOptions="Center">
+                        <Label x:Name="ActiveMinutesLabel" 
+                               FontSize="12" 
+                               TextColor="Gray"/>
+                        <Label x:Name="ActiveMinutesValue" 
+                               FontSize="20" 
+                               FontAttributes="Bold" 
+                               TextColor="Black"/>
+                        <Label x:Name="ActiveMinutesDetail" 
+                               FontSize="10" 
+                               TextColor="Gray"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+            
+            <!-- Second Section Title -->
+            <Label x:Name="Section2Title"
+                   FontSize="18" 
+                   FontAttributes="Bold" 
+                   TextColor="Black" 
+                   Margin="0,10,0,5"/>
+            
+            <!-- Device Card -->
+            <Border Stroke="LightGray"
+                    StrokeThickness="1"
+                    Padding="15"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="White">
+                <HorizontalStackLayout Spacing="15">
+                    <BoxView Color="Black" 
+                             WidthRequest="40" 
+                             HeightRequest="40" 
+                             CornerRadius="8"/>
+                    <VerticalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                        <Label x:Name="DeviceTitle" 
+                               FontSize="14" 
+                               FontAttributes="Bold" 
+                               TextColor="Black"/>
+                        <Label x:Name="DeviceSubtitle" 
+                               FontSize="10" 
+                               TextColor="Gray"/>
+                    </VerticalStackLayout>
+                    <BoxView Color="LightGreen" 
+                             WidthRequest="10" 
+                             HeightRequest="10" 
+                             CornerRadius="5"
+                             VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+            </Border>
+            
+            <!-- Highlighted Card -->
+            <Border Stroke="Purple"
+                    StrokeThickness="2"
+                    Padding="20"
+                    Margin="0,10"
+                    StrokeShape="RoundRectangle 15"
+                    BackgroundColor="Purple">
+                <VerticalStackLayout Spacing="8">
+                    <HorizontalStackLayout Spacing="10">
+                        <Label x:Name="HighlightTitle"
+                               FontSize="16" 
+                               TextColor="White"
+                               HorizontalOptions="Start"/>
+                        <Label x:Name="HighlightIcon"
+                               FontSize="16" 
+                               HorizontalOptions="End"/>
+                    </HorizontalStackLayout>
+                    <Label x:Name="HighlightValue"
+                           FontSize="28" 
+                           FontAttributes="Bold" 
+                           TextColor="White"/>
+                    <Label x:Name="HighlightDetail1"
+                           FontSize="12" 
+                           TextColor="White" 
+                           Opacity="0.9"/>
+                    <Label x:Name="HighlightDetail2"
+                           FontSize="12" 
+                           TextColor="White" 
+                           Opacity="0.9"/>
+                    <Label x:Name="HighlightDetail3"
+                           FontSize="12" 
+                           TextColor="White" 
+                           Opacity="0.9"/>
+                </VerticalStackLayout>
+            </Border>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
