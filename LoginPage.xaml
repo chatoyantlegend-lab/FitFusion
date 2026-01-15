@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitFusionMobile.Pages.LoginPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="16">
+
+            <!-- Title -->
+            <Label Text="Fit Fusion"
+                   FontSize="32"
+                   HorizontalOptions="Center" />
+
+            <!-- Email -->
+            <Label Text="Email" />
+            <Entry x:Name="EmailEntry"
+                   Placeholder="Enter your email"
+                   Keyboard="Email" />
+
+            <!-- Password -->
+            <Label Text="Password" />
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Enter your password"
+                   IsPassword="True" />
+
+            <!-- Login button -->
+            <Button x:Name="LoginButton"
+                    Text="Login"
+                    Clicked="OnLoginClicked" />
+
+            <!-- Message area (for later: success/error) -->
+            <Label x:Name="MessageLabel"
+                   Text=""
+                   HorizontalOptions="Center" />
+
+            <!-- Link text -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="6">
+                <Label Text="Don't have an account?" />
+                <Label Text="Sign up"
+                       TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSignupTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
