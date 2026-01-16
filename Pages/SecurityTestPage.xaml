@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitFusionSecurityPrototype.Pages.SecurityTestPage"
+             Title="Security Test">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="12">
+            <Label Text="Input Validation + Sanitization Demo"
+                   FontSize="20"
+                   FontAttributes="Bold" />
+
+            <Entry x:Name="UsernameEntry" Placeholder="Username" />
+            <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+            <Editor x:Name="GoalsEditor" Placeholder="Goals" AutoSize="TextChanges" />
+
+            <Button Text="Validate + Sanitize" Clicked="OnValidateClicked" />
+
+            <Label x:Name="ResultLabel" Text="" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
