@@ -1,0 +1,19 @@
+This folder contains my individual cybersecurity work for the FitFusion project.
+
+Pages:
+- SecurityTestPage.xaml / .cs
+  A UI page designed to test input validation and sanitization.
+  It allows users to enter username, email, password, and goals,
+  demonstrating how unsafe input is handled securely.
+
+Services:
+- InputValidator.cs
+  Handles validation rules such as required fields, email format,
+  and password strength.
+
+- InputSanitizer.cs
+  Cleans user input by removing potentially malicious characters,
+  reducing risks such as injection attacks.
+
+This work was developed independently to practice secure coding,
+input validation, defensive programming, and error handling.
